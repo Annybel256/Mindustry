@@ -8,27 +8,68 @@ body {
 
 /**Меню выбора планеты**/
 
-.android-planet-button {
+.android-planet-menu {
 	position: absolute;
 	right: 30px;
 	top: 18px;
-	@media (min-width: 900px) { display: none; }
+	@media (min-width: 900px) {display: none;}
 }
 
-.android-planet-button:hover,.android-filter-menu:hover {
-	background-color: rgba(255,255,255,1);
-	border: 1px solid white;
-	border-radius: 75px;
-	filter: invert(100%);
-	transition: 1.5s all;
-}
+/**Инпут меню выбора планет**/
 
-.android-planet-button input {
+.android-planet-button {
 	display: none;
 }
 
+/**Настройка иконки**/
+
 .android-planet-label img {
 	width: 36px;
+	transition: 1.5s all;
+}
+
+.android-planet-button:checked~.android-planet-list {
+	transition: 0.25s all;
+	overflow: visible;
+	height: auto;
+	z-index: 2; 
+}
+
+.android-planet-button:checked~.android-planet-label img {
+	background-color: rgba(255,255,255,1);
+	border: 1px solid white;
+	border-radius: 75px;
+	padding: 5px;
+	filter: invert(100%);
+	transition: 1.5s all;	
+}
+
+/**Настройка списка**/
+
+.android-planet-list {
+	position: absolute;
+	top: 45px;
+	right: -30px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 2;
+	height: 0px;
+	overflow: hidden;
+	transition: 0.75s all;
+}
+
+.android-planet-list li {
+	font-size: 20px;
+}
+
+.android-planet-list button {
+	width: 100%;
+	padding: 12px;
+	text-align: center;
+}
+
+.android-planet-list button:hover {
+	background-color: rgba(0,0,0,1);
+	filter: invert(100%);
 }
 
 /**Меню выбора фильтра**/
@@ -66,6 +107,19 @@ body {
 	overflow: visible;
 	height: auto;
 	z-index: 2; 
+}
+
+.android-filter-button:checked~.android-filter-label img {
+	background-color: rgba(255,255,255,1);
+	border: 1px solid white;
+	border-radius: 75px;
+	padding: 5px;
+	filter: invert(100%);
+	transition: 1.5s all;
+}
+
+.android-filter-label img {
+	transition: 1.5s all;
 }
 
 .android-filter-menu button {

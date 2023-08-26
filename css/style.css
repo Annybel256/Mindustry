@@ -3,7 +3,7 @@
 body {
 	font-family: 'Play', sans-serif;
 	font-weight: 400;
-	min-height: 4000px;
+	min-height: auto;
 }
 
 .header {

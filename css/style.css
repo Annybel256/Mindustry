@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
+
+body {
+	font-family: 'Play', sans-serif;
+	font-weight: 400;
+	min-height: 4000px;
+}
+
+.header {
+	margin-top: 0;
+}
+
+/**Логотип**/
+
+.top-header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 15px;
+	border-bottom: 1px solid black;
+}
+
+.top-header img {
+	width: 32px;
+}
+
+.top-header::after {
+	position: absolute;
+	font-size: 18px;
+	font-weight: 700;
+	left: 48px;
+	top: 25px;
+	content: 'Mindustry GideBook';
+	display: inline-block;
+	color: black;
+}
+
+/**Кнопка выбора планет**/
+
+.planet-button,.planet-label {
+	position: absolute;
+	right: 50px;
+	top: 28px;
+	font-weight: 700;
+	@media (max-width: 900px) { display: none; }
+}
+
+.planet-button {
+	display: none;
+}
+
+.planet-button:checked~.planet-menu {
+	transition: 0.25s all;
+	overflow: visible;
+	height: auto;
+	z-index: 2; 
+}
+
+.planet-menu {
+	position: absolute;
+	top: 62px;
+	right: 0px;
+	background-color: rgba(0,0,0,0.5);
+	height: 0px;
+	overflow: hidden;
+	z-index: 0;
+	transition: 0.25s all;
+}
+
+.planet-menu a {
+	color: white;
+}
+
+.planet-menu li {
+	width: 100%;
+	font-size: 18px;
+	padding: 0px 0px;
+}
+
+.planet-menu button {
+	padding: 12px 40px;
+	width: 100%;
+	border: 1px solid rgba(255,255,255,0.0);
+}
+
+.planet-menu button:hover {
+	transition: 0.2 all;
+	background-color: rgba(0,0,0,1);
+	filter: invert(100%);
+}
+
+/**Шапка**/
+
+.main-header {
+	position: relative;
+	font-size: 48px;
+	text-align: center;
+	margin-top: 0;
+	z-index: 1;
+}
+
+.main-header img {
+	width: 100%;
+	filter: brightness(0.7);
+}
+
+/**Меню**/
+
+.bottom-header {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	z-index: 2;
+	@media (max-width: 900px) { display: none; }
+}
+
+/**Настройка списка**/
+
+.bottom-header ul {
+	width: 100%;
+	display: flex;
+	font-size: 18px;
+	justify-content: space-between;
+	padding: 0 15px;
+}
+
+/**Настройка кнопок**/
+
+.bottom-header button {
+	width: 100%;
+	border-bottom: 1px solid white;
+	padding: 15px 35px;
+}
+
+/**Эффекты при наведении**/
+
+.bottom-header button:hover {
+	background-color: rgba(0,0,0,1);
+	filter: invert(100%);
+	transition: 0.7s all;
+}
+
+/**Тело сайта**/
+
+.body-form {
+	margin-top: 35px;
+	position: relative;
+}
+

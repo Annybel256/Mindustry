@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
 
+/**Тело сайта**/
+
 body {
 	font-family: 'Play', sans-serif;
 	font-weight: 400;
-	min-height: auto;
-	min-weight: 670px;
+	min-height: 4000px;
 }
+
+/**Шапка сайта**/
 
 .header {
 	margin-top: 0;
+}
+
+.button {
+	padding: 15px 30px;
+	background: #f4ba6e;
 }
 
 /**Логотип**/
@@ -21,9 +29,13 @@ body {
 	border-bottom: 1px solid black;
 }
 
+/**Картинка лого**/
+
 .top-header img {
 	width: 32px;
 }
+
+/**Текст лого**/
 
 .top-header::after {
 	position: absolute;
@@ -43,12 +55,16 @@ body {
 	right: 50px;
 	top: 28px;
 	font-weight: 700;
-	@media (max-width: 900px) { display: none; }
+	@media (max-width: 900px) {display: none;}
 }
+
+/**Чекбокс кнопки для выбор планет**/
 
 .planet-button {
 	display: none;
 }
+
+/**Проверка на включение чекбокса**/
 
 .planet-button:checked~.planet-menu {
 	transition: 0.25s all;
@@ -56,6 +72,8 @@ body {
 	height: auto;
 	z-index: 2; 
 }
+
+/**Список планет**/
 
 .planet-menu {
 	position: absolute;
@@ -68,9 +86,13 @@ body {
 	transition: 0.25s all;
 }
 
+/**Настройка ссылок**/
+
 .planet-menu a {
 	color: white;
 }
+
+/**Настройка списка**/
 
 .planet-menu li {
 	width: 100%;
@@ -105,7 +127,7 @@ body {
 	filter: brightness(0.7);
 }
 
-/**Меню**/
+/**Меню навигации**/
 
 .bottom-header {
 	position: absolute;
@@ -145,6 +167,9 @@ body {
 
 .body-form {
 	margin-top: 35px;
+	padding: 0 35px;
 	position: relative;
 }
+
+/**Шаблон контента**/
 
